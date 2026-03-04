@@ -32,6 +32,8 @@ public class EmployeeMain {
 	System.out.println("-------------Print  Emp from Consumer--------------------");
 	printConditionallyConsumer(employeeList, (p) ->true, (p) -> System.out.println(p.toString()));
 	
+	System.out.println("-------------Print  Emp Count--------------------");
+	totalEmpcount(employeeList);
 	}
 	//printConditionallyConsumer(people, (p) -> p.getLastName().startsWith("N"), (p) -> System.out.println(p.getLastName()));
 	
@@ -46,6 +48,14 @@ public class EmployeeMain {
 				System.out.println(emp);
 			}
 		}
+		
+	}
+	
+	public static void totalEmpcount(List<Employee> employeeList)
+	{
+		
+				System.out.println("Total emp count : "+employeeList.size());
+		
 		
 	}
 	
