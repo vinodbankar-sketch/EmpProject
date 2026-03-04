@@ -59,6 +59,8 @@ public class EmployeeMain {
 		
 	}
 	
+	
+	
 	public static void printEmpWithDeptPredicate(List<Employee> employeeList, Predicate<Employee> predicate)
 	{
 		for(Employee emp : employeeList)
