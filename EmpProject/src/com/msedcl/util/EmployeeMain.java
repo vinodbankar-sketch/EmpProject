@@ -34,7 +34,14 @@ public class EmployeeMain {
 	
 	System.out.println("-------------Print  Emp Count--------------------");
 	totalEmpcount(employeeList);
+	
+	
+	System.out.println("-------------Print  test branch--------------------");
+	printEmpname(employeeList, (p) ->true, (p) -> System.out.println(p.toString()));
+	
 	}
+	
+	
 	//printConditionallyConsumer(people, (p) -> p.getLastName().startsWith("N"), (p) -> System.out.println(p.getLastName()));
 	
 	
@@ -74,6 +81,18 @@ public class EmployeeMain {
 	}
 	
 	public static void printConditionallyConsumer(List<Employee> employeeList, Predicate<Employee> predicate,Consumer<Employee> consumer)
+	{
+		for(Employee person : employeeList)
+		{
+			if (predicate.test(person))
+			{
+				consumer.accept(person);
+			}
+		}
+		
+	}
+	
+	public static void printEmpname(List<Employee> employeeList, Predicate<Employee> predicate,Consumer<Employee> consumer)
 	{
 		for(Employee person : employeeList)
 		{
