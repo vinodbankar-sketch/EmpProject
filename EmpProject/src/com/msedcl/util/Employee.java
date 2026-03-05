@@ -9,6 +9,7 @@ public class Employee {
 	
 	public Employee() {
 		// TODO Auto-generated constructor stub
+		System.out.println("Vinod_Maruti");
 	}
 	
 	public Employee(int id, String name, int salary, String department) {
