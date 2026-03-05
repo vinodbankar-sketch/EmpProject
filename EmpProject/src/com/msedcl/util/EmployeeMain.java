@@ -30,7 +30,7 @@ public class EmployeeMain {
 	
 	
 	System.out.println("-------------Print  Emp from Consumer--------------------");
-	printConditionallyConsumer(employeeList, (p) ->true, (p) -> System.out.println(p.toString()));
+	//printConditionallyConsumer(employeeList, (p) ->true, (p) -> System.out.println(p.toString()));
 	
 	System.out.println("-------------Print  Emp Count--------------------");
 	totalEmpcount(employeeList);
