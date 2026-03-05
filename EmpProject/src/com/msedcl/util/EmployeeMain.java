@@ -32,7 +32,13 @@ public class EmployeeMain {
 	System.out.println("-------------Print  Emp from Consumer--------------------");
 	printConditionallyConsumer(employeeList, (p) ->true, (p) -> System.out.println(p.toString()));
 	
+	
+	System.out.println("-------------printTotalWithSalarygreaterthan50kPredicate--------------------");
+	printTotalWithSalarygreaterthan50kPredicate(employeeList, (p) -> p.getSalary()>50000);
+	
+	
 	}
+	
 	//printConditionallyConsumer(people, (p) -> p.getLastName().startsWith("N"), (p) -> System.out.println(p.getLastName()));
 	
 	
@@ -46,6 +52,21 @@ public class EmployeeMain {
 				System.out.println(emp);
 			}
 		}
+		
+	}
+	
+	public static void printTotalWithSalarygreaterthan50kPredicate(List<Employee> employeeList, Predicate<Employee> predicate)
+	{
+		int total_salary=0;
+		for(Employee emp : employeeList)
+		{
+			if (predicate.test(emp))
+			{
+				total_salary= total_salary+emp.getSalary();
+				//System.out.println(emp);
+			}
+		}
+		System.out.println(total_salary);
 		
 	}
 	
