@@ -59,6 +59,16 @@ public class EmployeeMain {
 		
 	}
 	
+	
+	public static void code(List<Employee> employeeList)
+	{
+		
+				System.out.println("Total emp count : ");
+		
+		
+	}
+	
+	
 	public static void printEmpWithDeptPredicate(List<Employee> employeeList, Predicate<Employee> predicate)
 	{
 		for(Employee emp : employeeList)
